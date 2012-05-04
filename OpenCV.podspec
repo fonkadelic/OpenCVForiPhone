@@ -87,12 +87,12 @@ Pod::Spec.new do |s|
   # against for this Pod to work.
   #
   # s.framework  = 'SomeFramework'
-  s.frameworks = 'OpenCV', 'AVFoundation', 'ImageIO', 'libz', 'CoreVideo', 'CoreMedia'
+  s.frameworks = 'OpenCV', 'AVFoundation', 'ImageIO', 'CoreVideo', 'CoreMedia'
 
   # Specify a list of libraries that the application needs to link
   # against for this Pod to work.
   #
-  # s.library   = 'iconv'
+  s.library   = 'z'
   # s.libraries = 'iconv', 'xml2'
 
   # If this Pod uses ARC, specify it like so.
@@ -108,6 +108,6 @@ Pod::Spec.new do |s|
   # If you need to specify any other build settings, add them to the
   # xcconfig hash.
   #
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(SRCROOT)/Pods/OpenCV' }
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/Pods/OpenCV' }
 
 end
